@@ -6,14 +6,14 @@ var playlisturl = document.querySelector('input');
 async function show(){
     const playlistId = playlisturl.value.substring(38);
     const totaltime = [];
-    const res = await fetch(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=50&playlistId=${playlistId}&key=AIzaSyAEZ4y7r7x0N-fcqRzAz-F4ICt3OsGkk20`);
+    const res = await fetch(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=50&playlistId=${playlistId}&key=your_key`);
     const data = await res.json();
     const videos = await data.items;
     
 
     videos.forEach( async(element) => {
         const videoId = element?.contentDetails?.videoId;
-        const response = await fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=contentDetails&id=${videoId}&key=AIzaSyAEZ4y7r7x0N-fcqRzAz-F4ICt3OsGkk20`);
+        const response = await fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=contentDetails&id=${videoId}&key=your_key`);
         const details = await response.json();
         totaltime.push(details.items[0]?.contentDetails?.duration)
         const div = document.createElement('div');
