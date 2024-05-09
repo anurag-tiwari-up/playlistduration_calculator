@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* height: 100vh;
+    width:  100vw; */
+}
+
+body{
+    background-color: #23272F;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25vh;
+}
+
+body label{
+    font-size: 15vh;
+    color: #58C4DC;
+}
+
+.url{
+    height: 10vh;
+    width: 70vh;
+    font-size: 3vh;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 3vh;
+}
+
+body button{
+    height: 10vh;
+    width: 15vh;
+    border-radius: 10px;
+    margin-top: 3vh;
+    font-size: 4vh;
+}
+
+@media all and (max-width : 900px){
+    body{
+        padding-top: 20vh;
+    }
+    body label{
+        font-size: 5vh;
+    }
+    .url{
+        height: 10vh;
+        width: 45vh;
+        margin-top: 1vh;
+    }
+    body button{
+        height: 8vh;
+        width: 12vh;
+        border-radius: 10px;
+        margin-top: 3vh;
+        font-size: 4vh;
+    }
+}
